@@ -4,7 +4,7 @@ package jp.mixi.assignment.controller.beg;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
-
+import android.widget.Toast;
 /**
  * TODO: 課題1
  * {@link Toast#makeText(Context, CharSequence, int)} または
@@ -19,12 +19,15 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        Toast.makeText(this, "text", Toast.LENGTH_LONG).show();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+        Toast.makeText(this, "text", Toast.LENGTH_LONG).show();
         return true;
     }
 }
