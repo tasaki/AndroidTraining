@@ -59,17 +59,8 @@ public class MainActivity extends Activity {
         @Override
         protected Void doInBackground(Void... params) {
             try {
-                publishProgress();
-                Thread.sleep(2000L);
-                publishProgress();
-                Thread.sleep(2000L);
-                publishProgress();
-                Thread.sleep(2000L);
-                publishProgress();
-                Thread.sleep(2000L);
-                publishProgress();
-                Thread.sleep(2000L);
-                publishProgress();
+                Thread.sleep(5000L);
+                Toast.makeText(MainActivity.this, "onecute", Toast.LENGTH_SHORT).show();
             } catch (InterruptedException e) {
                 Log.e(MyAsyncTask.class.getSimpleName(), "thread interrupted: ", e);
             }

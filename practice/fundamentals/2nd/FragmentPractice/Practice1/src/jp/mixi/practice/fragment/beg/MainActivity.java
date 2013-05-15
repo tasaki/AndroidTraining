@@ -1,16 +1,25 @@
 
 package jp.mixi.practice.fragment.beg;
 
+import jp.mixi.practice.fragment.beg.SampleFragmentPagerAdapter;
+import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
-import android.app.Activity;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.ViewPager;
 import android.view.Menu;
 
-public class MainActivity extends Activity {
+public class MainActivity extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ViewPager pager = (ViewPager) findViewById(R.id.Pager);
+        FragmentManager fm = getSupportFragmentManager();
+        SampleFragmentPagerAdapter sampleFragmentPagerAdapter = new SampleFragmentPagerAdapter(fm);
+        
+        pager.setAdapter(sampleFragmentPagerAdapter);
     }
 
     @Override
