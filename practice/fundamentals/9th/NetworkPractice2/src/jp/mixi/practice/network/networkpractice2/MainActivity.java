@@ -1,5 +1,10 @@
 package jp.mixi.practice.network.networkpractice2;
 
+import java.io.IOException;
+
+import org.apache.http.client.HttpClient;
+import org.apache.http.impl.client.DefaultHttpClient;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -18,6 +23,20 @@ public class MainActivity extends Activity {
 
             public void onClick(View v) {
                 // http getの処理を書く
+            	HttpClient client = new DefaultHttpClient();
+            	try {
+            		client.execute(
+            			new HttpGet("http://mixi.jp"),
+            			new ResponseHandler<string>() {
+                            public String handleResponse(HttpResponse response)
+                                throws ClientProtocolException, IOException {
+                                	return EntityUtils.toString(response.getEntity());
+                            	}
+            			}
+            		);
+            	} catch (IOException e) {
+            		e.printStackTrace();
+            	}
             }
         });
         
