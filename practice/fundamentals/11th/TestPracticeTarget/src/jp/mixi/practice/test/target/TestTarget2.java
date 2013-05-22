@@ -5,10 +5,15 @@ package jp.mixi.practice.test.target;
  */
 public class TestTarget2 {
     public boolean isValidLength(String string) {
-        return true;
+    	int length = string.length();
+    	
+    	if (0 < length && length <= 10) {
+    		return true;
+    	}
+        return false;
     }
 
     public String formatTextCount(int count, int max) {
-        return "";
+        return count + " / " + max;
     }
 }
