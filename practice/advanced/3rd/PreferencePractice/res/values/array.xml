@@ -1,0 +1,12 @@
+<resources>
+	<string-array name="item_list">
+	    <item>15分</item>
+	    <item>1時間</item>
+	    <item>1日</item>
+	</string-array>
+	<string-array name="item_value">
+	    <item>15min</item>
+	    <item>1hour</item>
+	    <item>1day</item>
+	</string-array>
+</resources>

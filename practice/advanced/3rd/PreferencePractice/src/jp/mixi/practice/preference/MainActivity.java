@@ -13,7 +13,8 @@ public class MainActivity extends PreferenceActivity {
         // TODO:preferences.xmlを作成してください
         // TODO:作成したpreferences.xmlの読み込み処理を実装してください
         // TODO:ListPreferenceの設定が変更されたらSummaryに反映してください
-
+        addPreferencesFromResource(R.xml.preference);
+        
     }
 
 }

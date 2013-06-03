@@ -3,12 +3,14 @@ package jp.mixi.practice.dialog.med;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
     @Override
@@ -44,7 +46,6 @@ public class MainActivity extends Activity {
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
-
         // TODO: 長押しメニューに、削除・キャンセル、の 2 つの項目を表示する
         getMenuInflater().inflate(R.menu.main, menu);
     }
@@ -53,6 +54,13 @@ public class MainActivity extends Activity {
     public boolean onContextItemSelected(MenuItem item) {
         // TODO: 長押しメニューの、削除、の項目の選択をハンドリングして、確認のためのダイアログを
         // ListItemSelectionDialogFragment を使用して表示する
-        return super.onContextItemSelected(item);
+
+        switch (item.getItemId()) {
+        case R.id.delete:
+            Toast.makeText(this, "tttt", Toast.LENGTH_SHORT).show();
+            return true;
+        default:
+            return super.onContextItemSelected(item);
+        }
     }
 }

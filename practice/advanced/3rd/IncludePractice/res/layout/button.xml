@@ -10,11 +10,17 @@
 
     <!-- 自由にincludeを使用したレイアウトを作成してください -->
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/B1"
+        android:layout_marginTop="150dp"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
-    
-    <include layout="@layout/button" />
+        android:text="B1"/>
+    <Button
+        android:id="@+id/B2"
+        android:layout_below="@+id/B1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="B2"/>
 
 </RelativeLayout>
